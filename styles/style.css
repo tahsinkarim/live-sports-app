@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;600&display=swap");
+:root {
+  --dark-gray: #373a36;
+  --light-gray: #e6e2dd;
+  --accent-clr: #9cb700;
+  --white: #fff;
+  --primary-text: 'Poppins', sans-serif;
+  --secondary-text: font-family: 'Roboto', sans-serif;
+}
+body {
+  margin: 0;
+  font-family: var(--primary-text);
+}
+a {
+  text-decoration: none;
+}
+main{
+  padding: 50px;
+}
+/*---------------
+   Hero page Style 
+-----------------*/
+.banner{
+  max-width: 1320px;
+  margin: 0 auto;
+  background-color: #161616;
+  color: var(--white);
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+}
+.banner-content{
+ width: 50%;
+ padding-left: 80px;
+ margin: 70px 0;
+}
+.banner-content .banner-title{
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 4.5rem;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+.banner-text{
+  color: var(--light-gray);
+  padding-right: 13px;
+}
+.banner-btn{
+  background: var(--accent-clr);
+  font-family: var(--secondary-text);
+  color: var(--white);
+  border: 1px solid var(--accent-clr);
+  border-radius: 5px;
+  padding: 10px 18px;
+  font-weight: 600;
+  font-size: 18px;
+  transition: all 0.3s ease-in;
+  margin-top: 10px;
+}
+.banner-btn i {
+  margin-left: 8px;
+}
+.banner-btn:hover{
+  background-color: #282829;
+  color: var(--accent-clr);
+}
+.banner-img{
+  width: 50%;
+}
+.banner-img img {
+  width: 100%;
+  display: block;
+}
+/*-----------------------
+   Matches Section Style 
+-------------------------*/
+.matches{
+  max-width: 1320px;
+  margin: 100px auto;
+  display: flex;
+  gap: 24px;
+}
+.match-btns{
+  background-color: var(--dark-gray);
+  min-width: 280px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+
+}
+.match-btns a {
+  background-color: var(--white);
+  color: black;
+  width: 200px;
+  border-radius: 10px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.match-btns a:hover{
+  background-color: var(--accent-clr);
+  color: var(--white);
+}
+.match-btns .blog-btn{
+  background-color: var(--accent-clr);
+  color: var(--white);
+  transition: all 0.3s ease;
+}
+.match-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.match-card{
+  border: 1px solid var(--light-gray);
+  border-radius: 10px;
+}
+.match-card img {
+  width: 100%;
+}
+.match-card .card-info {
+  padding: 20px;
+}
+.match-btn{
+  background-color: var(--white);
+  border-radius: 5px;
+  border: 1px solid var(--dark-gray);
+  padding: 5px 10px;
+  font-weight: 600;
+  font-size: 16px;
+  font-family: var(--primary-text);
+}
+.card-info-icons{
+  color: rgba(22, 22, 22, 0.7);
+}
+.card-info-icons .comment {
+  margin-left: 24px;
+}
+
+
+/*---------------
+   Footer Style 
+-----------------*/
+.footer{
+  background-color: var(--dark-gray);
+  color: var(--white);
+  text-align: center;
+  padding: 120px 0;
+}
+.footer-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+.footer hr {
+  color: var(--light-gray);
+  opacity: 0.1;
+  max-width: 1320px;
+  margin: 50px auto;
+}
+.footer .footer-links .link{
+  color: var(--light-gray);
+  transition: all .3s ease-in;
+  margin: 0 1rem;
+}
+
+.footer .footer-links .link:hover{
+  color: var(--accent-clr);
+}
+
+/*---------------
+   Mobile Style 
+-----------------*/
+@media only screen and (max-width: 576px){
+  main{
+    padding: 40px 20px ;
+  }
+  .banner{
+    flex-direction: column;
+    text-align: center;
+    padding: 33px 28px 0 28px;
+    border-radius: 10px;
+  }
+  .banner-content{
+    margin: 20px;
+    padding-left: 0;
+    width: 100%;
+  }
+  .banner-content .banner-title{
+    font-size: 22px;
+    line-height: normal;
+  }
+  .banner-content .banner-text {
+    font-size: 14px;
+  }
+  .banner-img {
+    width: 100%;
+    max-width: 300px;
+  }
+  /* Matches Section */
+  .matches{
+    flex-direction: column;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  .match-btns{
+    background-color: var(--white);
+    height: auto;
+  }
+
+  .match-btns a {
+    border: 1px solid var(--dark-gray);
+  }
+  .match-btns .blog-btn {
+    border: 1px solid var(--accent-clr);
+  }
+  .match-cards{
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* Footer Style */
+  .footer{
+    padding: 30px;
+  }
+  .footer-title{
+    font-size: 22px;
+  }
+  .footer hr {
+    margin: 25px auto;
+  }
+  .footer-links{
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+    font-size: 14px;
+  }
+}
