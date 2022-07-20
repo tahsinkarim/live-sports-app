@@ -205,7 +205,7 @@ main{
   background-color: var(--dark-gray);
   color: var(--white);
   text-align: center;
-  padding: 120px 32px;
+  padding: 120px 32px 50px 32px;
 }
 .footer-title {
   font-size: 2.5rem;
@@ -257,6 +257,12 @@ main{
   main{
     padding: 40px 20px ;
   }
+}
+@media only screen and (max-width: 768px){
+  section{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
   .banner{
     flex-direction: column;
     text-align: center;
@@ -274,6 +280,7 @@ main{
   }
   .banner-content .banner-text {
     font-size: 14px;
+    height: 30;
   }
   .banner-img {
     width: 100%;
@@ -330,7 +337,7 @@ main{
 /*----------
     Tablet 
 ------------*/
-@media only screen and (min-width: 577px) and (max-width:992px) {
+@media only screen and (min-width: 768px) and (max-width:992px) {
   .banner-content{
     padding-left: 50px;
   }
@@ -340,6 +347,12 @@ main{
   }
   .banner-content .banner-text {
     font-size: 14px;
+  }
+  .banner-text span {
+    display: none;
+  }
+  .banner-img{
+    align-self: flex-end;
   }
   /* Matches */
   .matches{
@@ -385,5 +398,16 @@ main{
     max-width: 732px;
     gap: 16px;
     margin: 0 auto;
+  }
+}
+/*----------
+    Laptop
+------------*/
+@media only screen and (min-width: 993px) and (max-width:1200px){
+  .banner-content .banner-title{
+    font-size: 3.25rem;
+  }
+  .banner-img img{
+    width: 100%;
   }
 }
