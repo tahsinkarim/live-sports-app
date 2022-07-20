@@ -154,9 +154,15 @@ main{
   padding: 10px 25px;
   font-family: var(--secondary-text);
   font-weight: 500;
-  margin: 0 auto;
+  margin: 10px auto;
   display: none;
-
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid var(--accent-clr);
+}
+.view-all:hover{
+  background-color: var(--white);
+  color: var(--accent-clr);
 }
 
 
@@ -187,6 +193,29 @@ main{
 
 .footer .footer-links .link:hover{
   color: var(--accent-clr);
+}
+.socials {
+  margin: 55px;
+  display: flex;
+  justify-content: center;
+}
+.socials a {
+  color: #fff;
+  background: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  height: 32px;
+  width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 8px;
+  font-size: 17px;
+  transition: all .3s ease;
+}
+.socials a:hover{
+  color: var(--accent-clr);
+  transform: scale(1.1);
 }
 
 /*---------------
@@ -307,8 +336,7 @@ main{
     display: block;
   }
   .footer{
-    padding-left: 24px;
-    padding-right: 24px;
+    padding: 70px 24px 30px 24px;
   }
   .footer-links{
     display: flex;
