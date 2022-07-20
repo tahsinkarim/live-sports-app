@@ -165,6 +165,38 @@ main{
   color: var(--accent-clr);
 }
 
+/*---------------------
+ Upcoming Matches Page 
+-----------------------*/
+.upcoming-matches{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.match-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+  padding: 50px 30px;
+}
+.match-flags{
+  display: flex;
+  gap: 20px;
+}
+.match-flags p {
+  font-weight: 700;
+}
+.match-flags div img {
+  width: 100%;
+}
+.match-date{
+  color: #4d4d4d;
+}
+
 
 /*---------------
    Footer Style 
@@ -272,6 +304,9 @@ main{
   .card-7, .card-8, .card-9{
     display: none;
   }
+  .upcoming-matches{
+    grid-template-columns: repeat(1, 1fr);
+  }
 
   /* Footer Style */
   .footer{
@@ -331,6 +366,9 @@ main{
   }
   .card-7, .card-8, .card-9{
     display: none;
+  }
+  .upcoming-matches{
+    grid-template-columns: repeat(2, 1fr);
   }
   .view-all{
     display: block;
