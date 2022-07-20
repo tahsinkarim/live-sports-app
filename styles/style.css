@@ -40,10 +40,12 @@ main{
   line-height: 4.5rem;
   margin-top: 0;
   margin-bottom: 24px;
+  animation: 2s fromLeft ease;
 }
 .banner-text{
   color: var(--light-gray);
   padding-right: 13px;
+  animation: 2.5s fromLeft ease;
 }
 .banner-btn{
   background: var(--accent-clr);
@@ -54,8 +56,9 @@ main{
   padding: 10px 18px;
   font-weight: 600;
   font-size: 18px;
-  transition: all 0.3s ease-in;
+  transition: background 0.3s ease-in, color 0.3s ease-in;
   margin-top: 10px;
+  animation: 2.5s fromLeft ease;
 }
 .banner-btn i {
   margin-left: 8px;
@@ -66,6 +69,7 @@ main{
 }
 .banner-img{
   width: 55%;
+  animation: 2.5s fromRight ease;
 }
 .banner-img img {
   width: 85%;
@@ -412,5 +416,42 @@ main{
   }
   .banner-img img{
     width: 100%;
+  }
+}
+/*------------
+   Animation 
+--------------*/
+@keyframes fromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-80%);
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+@keyframes fromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(80%);
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
   }
 }
